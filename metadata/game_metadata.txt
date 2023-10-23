@@ -1,0 +1,94 @@
+# Remove the pound sign and leading space for the properties below before publishing your game.
+# devid=myname
+# devtitle=My Name
+# gameid=mygame
+# gametitle=My Game
+# version=0.1
+# icon=metadata/icon.png
+
+# === Flags available at all licensing tiers ===
+
+# Defines the render scale quality for sprites. scale_quality=0 (default) is nearest neighbor, scale_quality=1 is linear, scale_quality=2 is antialiased.
+# scale_quality=0
+
+# === Flags available in DragonRuby Game Toolkit Pro ====
+
+# Uncomment the entry below to bytecode compile your Ruby code
+# compile_ruby=false
+
+# Uncomment the entry below to specify the package name for your APK
+# packageid=org.dev.gamename
+
+# Setting this property to true will enable High DPI rendering (try in combination with scale_quality to see what looks best)
+# highdpi=false
+
+# === Portrait Mode ===
+# The orientation can be set to either landscape (1280x720) or portrait (720x1280)
+# orientation=landscape
+
+# === HD Mode ===
+# HD Mode: when enabled, will give you 720p, 1080p, 1440p, 4k, and 5k rendering options
+# Check out the following YouTube Video for a demo of DragonRuby's HD Capabilities
+# https://youtu.be/Rnc6z84zaa4
+# hd=false
+
+# === Texture Atlases ===
+# See sample app for texture atlas usage: =./samples/07_advanced_rendering_hd/02_texture_atlases=
+# DragonRuby will recursively search the following directory for texture atlases.
+# sprites_directory=sprites
+
+# === All Screen Mode ===
+# To render edge to edge on the device, set hd_letterbox=false
+# NOTE: remove your game's letter box will mean more work for you since you have to
+#       think about what you want to render outside of the games main 1280x720 logical
+#       area.
+# hd_letterbox=true
+
+# === Scaling options for All Screen Mode ===
+# You can specify the maximum scale for your game. hd_max_scale's default value is 0 which
+# means "stretch to fit" (while retaining a 16:9 aspect ratio). This scaling method is not
+# pixel perfect, but is a reasonable default for most games.
+# hd_max_scale=0
+
+# hd_max_scale values other than 0 *will* be pixel perfect. Resolutions higher than your max scale
+# will give more area outside of your safe area that can be rendered to (if hd_letterbox=false)
+# or give you a bigger letterbox (if hd_letterbox=true).
+# Example:
+#   - Assuming that the hd_max_scale=1 (which means a game max scale of 1280x720) and hd_letterbox=false...
+#   - If the screen size is 2560x1440...
+#   - The safe area of the game will be rendered at 1280x720 centered vertically and horizontally within 2560x1440.
+#   - The horizontal centering of the game will mean that you have 640 pixels to the left and 640 pixels to the right of the game's safe area to render to.
+#   - The vertical centering of the game will mean that you have 360 pixels above and 360 below the game's safe area to render to.
+#
+# Take a look at the following sample apps to see how updating hd_max_scale and hd_letterbox affects your game:
+#   - ./samples/07_advanced_rendering_hd/03_allscreen_properties
+#   - ./samples/99_genre_platformer/clepto_frog
+#   - ./samples/99_genre_platformer/the_little_probe
+
+# Available hd_max_scale values (other than hd_max_scale=0 which is described above)
+# 720p: Scales up to 1280x720
+# hd_max_scale=100
+
+# HD+: scales up to 1600x900
+# hd_max_scale=125
+
+# 1080p/Full HD: scales up to 1920x1080
+# hd_max_scale=150
+
+# Full HD+: scales up to 2240x1260
+# hd_max_scale=175
+
+# 1440p: scales up to 2560x1440
+# hd_max_scale=200
+
+# 1800p: scales up to 3200x1800
+# hd_max_scale=250
+
+# 4k: scales up to 3840x2160
+# hd_max_scale=300
+
+# 5k: scales up to 6400x2880
+# NOTE: If you want a pixel perfect game for all resolutions. You'll want to use hd_max_scale=400.
+#       If you don't want to worry about rendering game artifacts outside of the pixel perfect area,
+#       keep hd_letterbox=true.
+# hd_max_scale=400
