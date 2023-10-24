@@ -11,7 +11,7 @@ Preferred install is via DragonRuby builtin [download_stb_rb](http://docs.dragon
 First, download the lib using the above method, in the DragonRuby Console:
 
 ```
-$gtk.download_stb_rb https://github.com/owenbutler/DR-particles/blob/main/app/particles.rb
+$gtk.download_stb_rb "https://github.com/owenbutler/DR-particles/blob/main/app/particles.rb"
 ```
 
 By default, this will download the lib to `owenbutler/DR-particles/particles.rb`
