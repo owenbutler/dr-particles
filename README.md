@@ -6,6 +6,8 @@ Small library and example code to create particle emitters in DragonRuby
 
 ![Example](example.png)
 
+The emitters used to create the effects above can be found in [example_emitters.rb](app/example_emitters.rb)
+
 ## Installation
 
 Preferred install is via DragonRuby builtin [download_stb_rb](http://docs.dragonruby.org.s3-website-us-east-1.amazonaws.com/docs.html#-----download_stb_rb(_raw)-)
