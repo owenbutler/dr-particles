@@ -7,9 +7,7 @@ def tick args
 
   args.outputs.background_color = [0, 0, 0]
 
-  process_emitters EMITTERS, $particles, args
-  process_particles $particles, args
-  render_particles $particles, args
+  particles_tick(EMITTERS, $particles, args)
 
   if args.inputs.keyboard.key_held.backspace
     args.outputs.primitives << args.gtk.framerate_diagnostics_primitives

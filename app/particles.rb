@@ -1,3 +1,10 @@
+
+def particles_tick(emitters, particles, args)
+  process_emitters(emitters, particles, args)
+  process_particles(particles, args)
+  render_particles(particles, args)
+end
+
 def process_emitters(emitters, particles, args)
 
   tc = args.tick_count
