@@ -64,3 +64,4 @@ end
 ## TODO
 
 - Add support for procedual palettes, ala https://owenbutler.itch.io/palette-test
+- Add support for emitters that remove after a certain time
