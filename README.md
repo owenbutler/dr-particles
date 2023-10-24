@@ -2,6 +2,8 @@
 
 Small library and example code to create particle emitters in DragonRuby
 
+### Demo
+
 ![Example](example.png)
 
 ## Installation
@@ -21,6 +23,8 @@ Include the following in your `main.rb`:
 ```
 require 'owenbutler/DR-particles/particles.rb'
 ```
+
+For more control over where the lib is downloaded, see the docs for [download_stb_rb](http://docs.dragonruby.org.s3-website-us-east-1.amazonaws.com/docs.html#-----download_stb_rb(_raw)-)
 
 ## Usage
 
@@ -58,4 +62,3 @@ end
 ## TODO
 
 - Add support for procedual palettes, ala https://owenbutler.itch.io/palette-test
-- Package up as a library that can be included using [download_stb_rb](http://docs.dragonruby.org.s3-website-us-east-1.amazonaws.com/docs.html#-----download_stb_rb(_raw)-)
