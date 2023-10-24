@@ -219,7 +219,7 @@ EMITTERS = [
 
 $particles = []
 
-def process_emitters emitters, args
+def process_emitters(emitters, particles, args)
 
   tc = args.tick_count
 
@@ -232,7 +232,7 @@ def process_emitters emitters, args
     if next_spawn.elapsed?
 
       emitter.num.times do
-        $particles << emitter.copy().merge!( {
+        particles << emitter.copy().merge!( {
           anchor_x: 0.5, anchor_y: 0.5,
           xvel: rand().remap(0, 1, emitter.xv_min, emitter.xv_max),
           yvel: rand().remap(0, 1, emitter.yv_min, emitter.yv_max),
@@ -248,9 +248,9 @@ def process_emitters emitters, args
   end
 end
 
-def process_particles args
+def process_particles(particles, args)
   # quick hack to both update particles, and reject/remove the dead ones
-  $particles.reject! do |p|
+  particles.reject! do |p|
     p.x += p.xvel
     p.y += p.yvel
     p.merge!(p.scale_rect(p.grow_factor, 0.0, 0.0))
@@ -268,17 +268,17 @@ def process_particles args
   end
 end
 
-def render_particles args
-  args.outputs.sprites << $particles
+def render_particles(particles, args)
+  args.outputs.sprites << particles
 end
 
 def tick args
 
   args.outputs.background_color = [0, 0, 0]
 
-  process_emitters EMITTERS, args
-  process_particles args
-  render_particles args
+  process_emitters EMITTERS, $particles, args
+  process_particles $particles, args
+  render_particles $particles, args
 
   if args.inputs.keyboard.key_held.backspace
     args.outputs.primitives << args.gtk.framerate_diagnostics_primitives
