@@ -4,7 +4,7 @@ Small library and example code to create particle emitters in DragonRuby
 
 ### Demo
 
-https://github.com/owenbutler/DR-particles/raw/main/example.mp4
+https://github.com/owenbutler/DR-particles/assets/179979/61dfcc1c-62e3-4a2c-b523-01d9a6e49820
 
 The emitters used to create the effects above can be found in [example_emitters.rb](app/example_emitters.rb)
 
