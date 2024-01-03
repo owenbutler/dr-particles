@@ -10,7 +10,7 @@ def tick args
   particles_tick(EMITTERS, $particles, args)
 
   if args.inputs.keyboard.key_held.backspace
-    args.outputs.primitives << args.gtk.framerate_diagnostics_primitives
+    args.outputs.debug << args.gtk.framerate_diagnostics_primitives
     args.outputs.labels << {y: 715, x: 550, text: "p: #{$particles.length}", r: 255, g: 255, b: 255, size_enum: -1}
   end
 end
