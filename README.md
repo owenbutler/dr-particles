@@ -15,10 +15,10 @@ Preferred install is via DragonRuby builtin [download_stb_rb](https://docs.drago
 First, download the lib using the above method, in the DragonRuby Console:
 
 ```
-$gtk.download_stb_rb "https://github.com/owenbutler/DR-particles/blob/main/app/particles.rb"
+$gtk.download_stb_rb "https://github.com/owenbutler/dr-particles/blob/main/app/particles.rb"
 ```
 
-By default, this will download the lib to `owenbutler/DR-particles/particles.rb`
+By default, this will download the lib to `owenbutler/dr-particles/particles.rb`
 
 Include the following in your `main.rb`:
 
@@ -33,7 +33,7 @@ For more control over where the lib is downloaded, see the docs for [download_st
 Minimal example:
 
 ```ruby
-require 'owenbutler/DR-particles/particles.rb'
+require 'owenbutler/dr-particles/particles.rb'
 
 $particles = []
 $emitters = [
