@@ -23,7 +23,7 @@ By default, this will download the lib to `owenbutler/dr-particles/particles.rb`
 Include the following in your `main.rb`:
 
 ```
-require 'owenbutler/DR-particles/particles.rb'
+require 'owenbutler/dr-particles/particles.rb'
 ```
 
 For more control over where the lib is downloaded, see the docs for [download_stb_rb](https://docs.dragonruby.org/#-----download_stb_rb(_raw)-)
