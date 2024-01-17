@@ -10,7 +10,7 @@ The emitters used to create the effects above can be found in [example_emitters.
 
 ## Installation
 
-Preferred install is via DragonRuby builtin [download_stb_rb](http://docs.dragonruby.org.s3-website-us-east-1.amazonaws.com/docs.html#-----download_stb_rb(_raw)-)
+Preferred install is via DragonRuby builtin [download_stb_rb](https://docs.dragonruby.org/#-----download_stb_rb(_raw)-)
 
 First, download the lib using the above method, in the DragonRuby Console:
 
@@ -26,7 +26,7 @@ Include the following in your `main.rb`:
 require 'owenbutler/DR-particles/particles.rb'
 ```
 
-For more control over where the lib is downloaded, see the docs for [download_stb_rb](http://docs.dragonruby.org.s3-website-us-east-1.amazonaws.com/docs.html#-----download_stb_rb(_raw)-)
+For more control over where the lib is downloaded, see the docs for [download_stb_rb](https://docs.dragonruby.org/#-----download_stb_rb(_raw)-)
 
 ## Usage
 
