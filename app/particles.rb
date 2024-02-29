@@ -51,6 +51,11 @@ def process_emitters(emitters, particles, args)
   while index < num_emitters
     emitter = emitters[index]
 
+    if emitter.key?(:etime)
+      emitter.etime -= 1
+      putz "emitter etime is #{emitter.etime}"
+    end
+
     next_spawn = emitter.fetch(:next_spawn, 0)
     if next_spawn.elapsed?
 
@@ -69,10 +74,22 @@ def process_emitters(emitters, particles, args)
         end
         particles << particle
       end
-      emitter[:next_spawn] = args.tick_count + emitter[:freq]
+      emitter[:next_spawn] = tc + emitter[:freq]
     end
 
     index += 1
+  end
+
+  emitters.reject! do |em|
+    should_remove = false
+    if em.key?(:etime)
+      putz "should remove this emitter"
+      if em.etime <= 0
+        should_remove = true
+      end
+    end
+
+    should_remove
   end
 end
 
