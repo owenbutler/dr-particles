@@ -60,5 +60,3 @@ def tick args
 end
 
 ```
-
-## TODO
