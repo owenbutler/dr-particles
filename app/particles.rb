@@ -62,12 +62,17 @@ def process_emitters(emitters, particles, args)
       emitter.num.times do
         particle = emitter.copy().merge!( {
           anchor_x: 0.5, anchor_y: 0.5,
+          x: maybe_range(emitter, :x),
+          y: maybe_range(emitter, :y),
+          w: maybe_range(emitter, :w),
+          h: maybe_range(emitter, :h),
           xvel: rand().remap(0, 1, emitter.xv_min, emitter.xv_max),
           yvel: rand().remap(0, 1, emitter.yv_min, emitter.yv_max),
-          time: tc + emitter.time,
+          time: tc + maybe_range(emitter, :time),
           angle: emitter.angle == -1 ? rand(360) : emitter.angle,
           spawn_time: tc,
         })
+
         if emitter.palette
           colors_hash = colors(color_time, emitter.palette)
           particle.merge!(colors_hash)
@@ -93,6 +98,17 @@ def process_emitters(emitters, particles, args)
   end
 end
 
+def maybe_range(emitter, key)
+  min_key = :"min_#{key}"
+  max_key = :"max_#{key}"
+
+  if emitter[min_key] && emitter[max_key]
+    rand().remap(0, 1, emitter[min_key], emitter[max_key])
+  else 
+    emitter[key]
+  end
+end
+
 def process_particles(particles, args)
   # quick hack to both update particles, and reject/remove the dead ones
   particles.reject! do |p|
@@ -108,7 +124,7 @@ def process_particles(particles, args)
       p.xvel += p.grav_x
       p.yvel += p.grav_y
     end
-
+    
     p.time.elapsed?
   end
 end
